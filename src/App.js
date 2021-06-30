@@ -18,6 +18,14 @@ function App() {
     setTodoItems((prevData) => [data, ...prevData]);
   };
 
+  const handleCheckBox = (id) => {
+    alert(`Item checked has id : ${id}`);
+  };
+
+  const handleDeleteOne = (id) => {
+    alert(`Delete this id ${id}`);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -31,13 +39,24 @@ function App() {
         <div>
           <Switch>
             <Route path="/all">
-              <All dataItems={todoItems} onAddData={addItemHandler} />
+              <All
+                dataItems={todoItems}
+                onAddData={addItemHandler}
+                onCheckedBox={handleCheckBox}
+              />
             </Route>
             <Route path="/active">
-              <Active dataItems={todoItems} onAddData={addItemHandler} />
+              <Active
+                dataItems={todoItems}
+                onAddData={addItemHandler}
+                onCheckedBox={handleCheckBox}
+              />
             </Route>
             <Route path="/completed">
-              <Completed dataItems={todoItems} />
+              <Completed
+                dataItems={todoItems}
+                handleDeleteOne={handleDeleteOne}
+              />
             </Route>
           </Switch>
         </div>

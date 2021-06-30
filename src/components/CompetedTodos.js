@@ -1,6 +1,10 @@
 import React from "react";
 
-const CompetedTodos = ({ item }) => {
+const CompetedTodos = ({ item, handleDeleteOne }) => {
+  const handleDelete = (id) => {
+    let idTodelete = id;
+    handleDeleteOne(idTodelete);
+  };
   return (
     <div>
       <div className="todolist">
@@ -8,7 +12,7 @@ const CompetedTodos = ({ item }) => {
         <p style={{ textDecoration: item.status && "line-through" }}>
           {item.title}
         </p>
-        <div className="btn">
+        <div className="btn" onClick={() => handleDelete(item.id)}>
           <ion-icon name="trash-outline"></ion-icon>
         </div>
       </div>

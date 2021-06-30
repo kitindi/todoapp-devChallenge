@@ -1,8 +1,9 @@
 import React from "react";
 
-const ToDoList = ({ item }) => {
+const ToDoList = ({ item, onCheckedBox }) => {
   const handleChange = (id) => {
-    alert(id);
+    const dataId = id;
+    onCheckedBox(dataId);
   };
   return (
     <div className="todolist">
