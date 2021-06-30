@@ -86,3 +86,19 @@ code {
 .completed-section {
   padding: 4% 0;
 }
+.btn-tab {
+  margin-top: 14%;
+  text-align: right;
+}
+.btn-delete {
+  cursor: pointer;
+  border: none;
+  padding: 1% 2%;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 0.75rem;
+}
+.btn {
+  cursor: pointer;
+  font-size: 0.95rem;
+}

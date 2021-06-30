@@ -8,8 +8,10 @@ const Completed = ({ dataItems }) => {
       {completedItems.map((item) => (
         <CompletedTodos item={item} key={item.id} />
       ))}
-      <div>
-        <button className="btn-delete">Delete All</button>
+      <div className="btn-tab">
+        <button className="btn-delete">
+          <ion-icon name="trash-outline"></ion-icon> Delete All
+        </button>
       </div>
     </div>
   );

@@ -4,10 +4,13 @@ const CompetedTodos = ({ item }) => {
   return (
     <div>
       <div className="todolist">
-        <input type="checkbox" checked={item.status} /> <p>{item.title}</p>
-        <button>
+        <input type="checkbox" checked={item.status} />{" "}
+        <p style={{ textDecoration: item.status && "line-through" }}>
+          {item.title}
+        </p>
+        <div className="btn">
           <ion-icon name="trash-outline"></ion-icon>
-        </button>
+        </div>
       </div>
     </div>
   );
