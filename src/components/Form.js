@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ onAddData }) => {
   const [data, setData] = useState("");
   const inputHandler = (event) => {
     setData(event.target.value);
@@ -8,7 +8,12 @@ const Form = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    alert(data);
+    const dataItem = {
+      id: Math.random().toString(),
+      title: data,
+      status: false,
+    };
+    onAddData(dataItem);
     setData("");
   };
   return (

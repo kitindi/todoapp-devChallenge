@@ -73,3 +73,16 @@ code {
   border-radius: 5%;
   cursor: pointer;
 }
+/* Todo List css */
+.todolist {
+  display: flex;
+  align-items: center;
+}
+.todolist p {
+  flex: 3;
+  padding-left: 2rem;
+}
+
+.completed-section {
+  padding: 4% 0;
+}
