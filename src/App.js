@@ -30,15 +30,14 @@ function App() {
     <Router>
       <div className="App">
         <h1>#todo</h1>
-
         <div className="links">
-          <Link to="/all">All</Link>
+          <Link to="/">All</Link>
           <Link to="/active">Active</Link>
           <Link to="/completed">Completed</Link>
         </div>
         <div>
           <Switch>
-            <Route path="/all">
+            <Route exact path="/">
               <All
                 dataItems={todoItems}
                 onAddData={addItemHandler}
