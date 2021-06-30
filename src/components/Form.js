@@ -8,13 +8,18 @@ const Form = ({ onAddData }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const dataItem = {
-      id: Math.random().toString(),
-      title: data,
-      status: false,
-    };
-    onAddData(dataItem);
-    setData("");
+
+    if (data) {
+      const dataItem = {
+        id: Math.random().toString(),
+        title: data,
+        status: false,
+      };
+      onAddData(dataItem);
+      setData("");
+    } else {
+      alert("Please add details 👇");
+    }
   };
   return (
     <div className="form-data">

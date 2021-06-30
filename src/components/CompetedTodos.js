@@ -4,7 +4,7 @@ const CompetedTodos = ({ item }) => {
   return (
     <div>
       <div className="todolist">
-        <input type="checkbox" checked={item.status} />{" "}
+        <input type="checkbox" checked={item.status} onChange="" />
         <p style={{ textDecoration: item.status && "line-through" }}>
           {item.title}
         </p>
