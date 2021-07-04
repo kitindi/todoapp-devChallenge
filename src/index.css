@@ -26,35 +26,24 @@ code {
   text-align: center;
   font-size: 3rem;
 }
-.links {
+.navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: ;
   border-bottom: 1px solid #d1d5db;
 }
-.links a {
+.navbar a {
   color: #1f2937;
   font-size: 1.2rem;
   font-weight: 500;
   padding: 1% 3%;
   /* border-bottom: 5px solid #faf9f9; */
 }
-/* .links a:hover {
-  color: #1f2937;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-bottom: 5px solid #0077b6;
-} */
+
 .border {
   border-bottom: 5px solid #0077b6;
 }
-/* .links a:active {
-  color: #1f2937;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-bottom: 5px solid #0077b6;
-} */
+
 .form-data {
   padding: 3% 0;
 }

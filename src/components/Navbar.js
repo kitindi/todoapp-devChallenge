@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation().pathname;
   return (
-    <div className="links">
+    <div className="navbar">
       <Link to="/" className={location === "/" ? "border" : "no-border"}>
         All
       </Link>
