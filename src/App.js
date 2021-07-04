@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import "./index.css";
 import All from "./components/All";
 import Active from "./components/Active";
 import Completed from "./components/Completed";
+import Navbar from "./components/Navbar";
 // sample data
 
 const todos = [
@@ -46,11 +47,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>#todo</h1>
-        <div className="links">
-          <Link to="/">All</Link>
-          <Link to="/active">Active</Link>
-          <Link to="/completed">Completed</Link>
-        </div>
+        <Navbar />
         <div>
           <Switch>
             <Route exact path="/">
