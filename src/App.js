@@ -74,6 +74,10 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <footer style={{ textAlign: "Center", paddingTop: "4rem" }}>
+          {" "}
+          devChallenge @ Abdulaziz Sadi
+        </footer>
       </div>
     </Router>
   );
