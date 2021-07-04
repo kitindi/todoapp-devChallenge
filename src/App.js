@@ -7,9 +7,9 @@ import Completed from "./components/Completed";
 // sample data
 
 const todos = [
-  { id: 1, title: "The Lean Startup", status: false },
-  { id: 2, title: "Work on Project", status: true },
-  { id: 3, title: "Signup for digitalocea Hackathons", status: false },
+  { id: 1, title: "The Lean Startup", isChecked: false },
+  { id: 2, title: "Work on Project", isChecked: false },
+  { id: 3, title: "Signup for digitalocea Hackathons", isChecked: false },
 ];
 function App() {
   const [todoItems, setTodoItems] = useState(todos);
@@ -19,11 +19,27 @@ function App() {
   };
 
   const handleCheckBox = (id) => {
-    alert(`Item checked has id : ${id}`);
+    // alert(id);
+    const updatedList = todoItems.map((item) => {
+      if (item.id === id) {
+        item.isChecked = true;
+      } else {
+        item.isChecked = false;
+      }
+      return item;
+    });
+
+    setTodoItems(updatedList);
   };
 
   const handleDeleteOne = (id) => {
-    alert(`Delete this id ${id}`);
+    // alert(`Delete this id ${id}`);
+    const filteredData = todoItems.filter((item) => item.id !== id);
+    setTodoItems(filteredData);
+  };
+  const handleDeleteAll = () => {
+    const cleanData = todoItems.filter((item) => item.completed === false);
+    setTodoItems(cleanData);
   };
 
   return (
@@ -41,20 +57,22 @@ function App() {
               <All
                 dataItems={todoItems}
                 onAddData={addItemHandler}
-                onCheckedBox={handleCheckBox}
+                handleCheckBox={handleCheckBox}
               />
             </Route>
             <Route path="/active">
               <Active
                 dataItems={todoItems}
                 onAddData={addItemHandler}
-                onCheckedBox={handleCheckBox}
+                handleCheckBox={handleCheckBox}
               />
             </Route>
             <Route path="/completed">
               <Completed
                 dataItems={todoItems}
                 handleDeleteOne={handleDeleteOne}
+                handleDeleteAll={handleDeleteAll}
+                handleCheckBox={handleCheckBox}
               />
             </Route>
           </Switch>

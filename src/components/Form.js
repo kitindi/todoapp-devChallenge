@@ -13,7 +13,7 @@ const Form = ({ onAddData }) => {
       const dataItem = {
         id: Math.random().toString(),
         title: data,
-        status: false,
+        isChecked: false,
       };
       onAddData(dataItem);
       setData("");

@@ -2,7 +2,7 @@ import React from "react";
 import Form from "./Form";
 import ToDoList from "./ToDoList";
 
-const All = ({ dataItems, onAddData, changeHandler, onCheckedBox }) => {
+const All = ({ dataItems, onAddData, changeHandler, handleCheckBox }) => {
   return (
     <div>
       <Form onAddData={onAddData} />
@@ -11,7 +11,7 @@ const All = ({ dataItems, onAddData, changeHandler, onCheckedBox }) => {
           item={item}
           key={item.id}
           changeHandler={changeHandler}
-          onCheckedBox={onCheckedBox}
+          handleCheckBox={handleCheckBox}
         />
       ))}
     </div>
